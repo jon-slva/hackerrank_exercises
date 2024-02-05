@@ -81,9 +81,14 @@ function jumpingOnClouds(c) {
 	return jumps;
 }
 
-console.log(jumpingOnClouds([0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0])); // 3
+// console.log(jumpingOnClouds([0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0])); // 3
 
-console.log("Jumping on the Clouds: solve time:52min")
-console.log(`Challenge: figuring out how to iterate based on condition. Figured out that I could control iteration within the loop body instead of at the end of the loop statement itself.`)
+console.log(`Jumping on the Clouds:
+Solve Time: 52min`)
+console.groupCollapsed('Notes')
+console.log('figuring out how to iterate based on condition. Figured out that I could control iteration within the loop body instead of at the end of the loop statement itself.')
+console.groupEnd()
+
+console.log('-----------------------------')
 
 module.exports = {}

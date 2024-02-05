@@ -95,8 +95,15 @@ function countingValleys(steps, path) {
 //sample input
 countingValleys(8, 'UDDDUDUU'); //Expected output 1
 
-console.log("Counting Valleys: solve time: 23m 19sec"); //1
+console.log('-----------------------------')
 
+console.log(`Counting Valley:
+Solve Time: 23m 19sec`);
+console.groupCollapsed('Notes')
+console.log(`Nothing to report`)
+console.groupEnd()
+
+console.log('-----------------------------')
 
 
 module.exports = {
