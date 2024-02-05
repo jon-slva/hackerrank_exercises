@@ -1,12 +1,14 @@
 {
-  "name": "hackerrank_exercises",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+	"name": "hackerrank_exercises",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node index.js",
+		"counting_valleys": "node ./counting_valleys.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
 }
