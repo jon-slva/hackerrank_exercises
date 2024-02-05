@@ -50,33 +50,12 @@ const INSTRUCTIONS = {
 	// The hiker enters and leaves one valley.
 }
 
-
-
-console.log("Hello, World!");
-
 'use strict';
 
 const fs = require('fs');
 
 process.stdin.resume();
 process.stdin.setEncoding('utf-8');
-
-let inputString = '';
-let currentLine = 0;
-
-process.stdin.on('data', function (inputStdin) {
-	inputString += inputStdin;
-});
-
-process.stdin.on('end', function () {
-	inputString = inputString.split('\n');
-
-	main();
-});
-
-function readLine() {
-	return inputString[currentLine++];
-}
 
 /*
  * Complete the 'countingValleys' function below.
@@ -87,28 +66,36 @@ function readLine() {
  *  2. STRING path
  */
 
+// Write your code here
 function countingValleys(steps, path) {
-	// Write your code here
+	// this function needs to iterate through the path paramter and count the number of valleys traversed
+	// in order to count the valleys, we need to keep track of current altitude, previous altitude, sea level, and how many times sea level is crossed.
+	// sea level can always assumed to be 0, negatives are below sea level, and positives are above.
+	// a variable can keep track of the times we arrive at sea level when the previous altitude was negative
+	// we need a loop which iterates through the path string, and checks if the previous altitude was negative and the current altitude is 0
+	// if it meets that condition, we can increase the variable which is counting the traverals
+	let prevAlt = 0;
+	let currentAlt = 0;
+	let valleys = 0;
 
+	for (let i = 0; i < steps; i++) {
+		prevAlt = currentAlt;
+		if (path[i] === 'U') {
+			currentAlt++;
+		} else {
+			currentAlt--;
+		}
+		if (prevAlt < 0 && currentAlt === 0) {
+			valleys++;
+		}
+	}
+	return valleys;
 }
 
+//sample input
+countingValleys(8, 'UDDDUDUU'); //Expected output 1
 
-function main() {
-	const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
-
-	const steps = parseInt(readLine().trim(), 10);
-
-	const path = readLine();
-
-	const result = countingValleys(steps, path);
-
-	ws.write(result + '\n');
-
-	ws.end();
-}
-
-
-
+console.log("Counting Valleys: solve time: 23m 19sec"); //1
 
 
 

@@ -5,10 +5,13 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node index.js",
+		"start": "nodemon index.js",
 		"counting_valleys": "node ./counting_valleys.js"
 	},
 	"keywords": [],
 	"author": "",
-	"license": "ISC"
+	"license": "ISC",
+	"dependencies": {
+		"nodemon": "^3.0.3"
+	}
 }
